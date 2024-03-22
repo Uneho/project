@@ -1,0 +1,90 @@
+<UserControl x:Class="Glina.Views.PrimaryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:Glina.Controls"
+             xmlns:converters="clr-namespace:Glina.Models.Converters">
+    
+    
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Styles/MainView/UserControlStyles.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Styles/MainView/MainWindowStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <converters:IndexToColorConverter x:Key="IndexToColorConverter"/> 
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    
+    <Grid Background="DarkRed">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="430"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Левая часть -->
+        <Grid Grid.Column="0">
+            <Image 
+                Source="{Binding CurrentItem.ImagePath}" 
+                Stretch="Fill"/>
+            <Button Content="{Binding CurrentItem.ButtonContent}"
+                    Command="{Binding CurrentItem.NavigateCommand}"
+                    VerticalAlignment="Bottom" 
+                    HorizontalAlignment="Center"
+                    Style="{StaticResource EntryButton}"/>
+        </Grid>
+        
+        <!-- Правая часть -->
+        <Grid Grid.Column="1">
+            
+            <Image Source="../Assets/MainView/mainwindowrightpanel1.png"/>
+
+            <!-- Кнопки переключения и точки -->
+            <StackPanel HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom" 
+                        Orientation="Horizontal">
+                
+                <Button Content="&#x276E;"
+                        Command="{Binding PreviousCommand}"
+                        Margin="20 10"
+                        HorizontalAlignment="Left"
+                        Style="{StaticResource RoundButtonStyle}"/>
+                
+                <!-- Индикаторы -->
+                <StackPanel HorizontalAlignment="Center" 
+                            VerticalAlignment="Bottom" 
+                            Orientation="Horizontal" 
+                            Margin="0,20">
+                    <Ellipse Width="10" Height="10"
+                             Fill="{Binding SelectedIndex, 
+                             Converter={StaticResource IndexToColorConverter}, 
+                             ConverterParameter=0}"
+                             Margin="5"/>
+                    <Ellipse Width="10" Height="10"
+                             Fill="{Binding SelectedIndex,
+                              Converter={StaticResource IndexToColorConverter}, 
+                              ConverterParameter=1}"
+                             Margin="5"/>
+                    <Ellipse Width="10" Height="10"
+                             Fill="{Binding SelectedIndex, 
+                             Converter={StaticResource IndexToColorConverter}, 
+                             ConverterParameter=2}"
+                             Margin="5"/>
+                </StackPanel>
+                
+                <Button Content="&#x276F;"
+                        Command="{Binding NextCommand}"
+                        Margin="20 0"
+                        Style="{StaticResource RoundButtonStyle}"/>
+                
+            </StackPanel>
+            
+            <controls:MinimazeClose HorizontalAlignment="Right" VerticalAlignment="Top" />
+            
+        </Grid>
+        
+    </Grid>
+    
+</UserControl>

@@ -1,0 +1,143 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Page Update="Styles\MainView\UserControlStyles.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Prism.Autofac" Version="7.1.0.431" />
+      <PackageReference Include="Prism.Wpf" Version="9.0.401-pre" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\RegistrationWindow\entryWith.png" />
+      <Content Include="Assets\RegistrationWindow\entryWith.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\RegistrationWindow\haveAcc.png" />
+      <Content Include="Assets\RegistrationWindow\haveAcc.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\RegistrationWindow\regFrame.png" />
+      <Content Include="Assets\RegistrationWindow\regFrame.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\RegistrationWindow\regText.png" />
+      <Content Include="Assets\RegistrationWindow\regText.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\RegistrationWindow\RegTitle.png" />
+      <Content Include="Assets\RegistrationWindow\RegTitle.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\RegistrationWindow\TitleText.png" />
+      <Content Include="Assets\RegistrationWindow\TitleText.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\MainView\Minimaze.png" />
+      <Content Include="Assets\MainView\Minimaze.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\MainView\mainwindowrightpanel1.png" />
+      <Content Include="Assets\MainView\mainwindowrightpanel1.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\MainView\Group5.png" />
+      <Content Include="Assets\MainView\Group5.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\MainView\Group4.png" />
+      <Content Include="Assets\MainView\Group4.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\MainView\Group3.png" />
+      <Content Include="Assets\MainView\Group3.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\MainView\Close.png" />
+      <Content Include="Assets\MainView\Close.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\AuthTitle.png" />
+      <Content Include="Assets\AuthorisationWindow\AuthTitle.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\close.png" />
+      <Content Include="Assets\AuthorisationWindow\close.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\create.png" />
+      <Content Include="Assets\AuthorisationWindow\create.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\entryButton.png" />
+      <Content Include="Assets\AuthorisationWindow\entryButton.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\Eye.png" />
+      <Content Include="Assets\AuthorisationWindow\Eye.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\forgetPass.png" />
+      <Content Include="Assets\AuthorisationWindow\forgetPass.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\hidePass.png" />
+      <Content Include="Assets\AuthorisationWindow\hidePass.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\LoginInput.png" />
+      <Content Include="Assets\AuthorisationWindow\LoginInput.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\mainLogo.png" />
+      <Content Include="Assets\AuthorisationWindow\mainLogo.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\noAcc.png" />
+      <Content Include="Assets\AuthorisationWindow\noAcc.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\TitleText.png" />
+      <Content Include="Assets\AuthorisationWindow\TitleText.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\Vectors\vectorBottomRight.png" />
+      <Content Include="Assets\AuthorisationWindow\Vectors\vectorBottomRight.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\Vectors\vectorButtomLeft.png" />
+      <Content Include="Assets\AuthorisationWindow\Vectors\vectorButtomLeft.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\Vectors\vectorLeft.png" />
+      <Content Include="Assets\AuthorisationWindow\Vectors\vectorLeft.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\Vectors\vectorTopMidlle.png" />
+      <Content Include="Assets\AuthorisationWindow\Vectors\vectorTopMidlle.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\Vectors\vectorTopRight.png" />
+      <Content Include="Assets\AuthorisationWindow\Vectors\vectorTopRight.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\AuthorisationWindow\Vectors\vectorTopRightSmall.png" />
+      <Content Include="Assets\AuthorisationWindow\Vectors\vectorTopRightSmall.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+</Project>
